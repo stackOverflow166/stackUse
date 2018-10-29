@@ -1,0 +1,14 @@
+{
+  "people": [
+    {
+      "id": 0,
+      "value": true,
+      "name": "test1"
+    },
+    {
+      "id": 1,
+      "value": true,
+      "name": "test2"
+    }
+  ]
+}
