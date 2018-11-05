@@ -99,16 +99,84 @@ class GeoPosition extends React.Component {
 }
 
 class MyForm extends React.Component {
+
+    constructor(props){
+        super(props)
+        this.state = {
+            state: true
+        }
+    }
+
+    componentDidMount (){
+        const user = {
+            email: "test@user.com",
+            password:"password123."
+        }
+        console.log(user)
+        const users = {
+            user: user
+        }
+        console.log(typeof users)
+        const user_json = JSON.parse(JSON.stringify(users))
+        console.log(typeof user_json)
+        // const user_string = "{\"user\":" + user_json + "}"
+        // console.log(user_string)
+        // console.log(typeof user_string)
+
+    }
+
+    changeCss(){
+        const states = this.state.state
+        this.setState({state: !states})
+    }
+
+    renderState(){
+        const layoutHeader = {
+            height: 320,
+            minHeight: 320,
+            background: "url('/assets/images/backgrounds/dark-material-bg.jpg') no-repeat",
+            backgroundSize: 'cover',
+            color: '#fff',
+    }
+        const showStyle = {
+            height: '200px',
+            width: '200px',
+            borderRadius: '10px',
+            // background: 'blue'
+        }
+
+        const bineStyle = Object.assign(layoutHeader,showStyle)
+
+        return (
+            <div>Test
+
+            </div>
+        )
+    }
+    renderMath(){
+        const maths = [{field: 32},{field: 35}]
+        const temp = 34
+        let lists = maths.map(function (o) {
+            if (o.field <= temp){
+                return (<b>{o.field}</b>)
+            }
+            else {
+                return o.field
+            }
+        })
+        return (
+            <div>
+                {lists}
+            </div>
+        )
+
+    }
     render() {
+
         return (
             <div>
                 <div>MyForm</div>
-                <Form
-                    formData={formData}
-                    schema={schema}
-                    uiSchema={uiSchema}
-                    fields={fields}
-                />
+                {this.renderMath()}
             </div>
         )
     }
