@@ -24,6 +24,12 @@ import DatePicker from './datePicker/index'
 import Filter from './drawText/index'
 import ReactPdf from './reactPdf'
 import Between from './between'
+import HighOrder from './highOrder/index'
+import Render from './render/index'
+import File from './file/index'
+import TimePickers from './timepicker'
+import DatePcikers from './datepickers'
+import StepAntd from './steps'
 
 
 class App extends Component {
@@ -32,7 +38,13 @@ class App extends Component {
       const time = new Date().toLocaleString();
     return (
       <div className="App">
-          <Between/>
+          <StepAntd/>
+          {/*<DatePcikers/>*/}
+          {/*<TimePickers/>*/}
+          {/*<File/>*/}
+          {/*<Render/>*/}
+          {/*<HighOrder/>*/}
+          {/*<Between/>*/}
           {/*<ReactPdf/>*/}
           {/*<Filter/>*/}
           {/*<DatePicker/>*/}

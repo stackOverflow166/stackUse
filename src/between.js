@@ -16,15 +16,6 @@ class RegisterShop extends Component {
                 [{y: 5, x: 10.74576664},{y: 6, x: 10.7502327}]
             ]
         }
-        this.renderGraphData = this.renderGraphData.bind(this)
-    }
-    static async getInitialProps(x){
-        await this.setState({
-            user: 'user'
-        })
-    }
-    componentDidMount(){
-        RegisterShop.getInitialProps()
     }
     renderGraphData(){
         const graphArray = []
